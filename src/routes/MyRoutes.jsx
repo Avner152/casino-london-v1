@@ -17,6 +17,8 @@ export default function MyRoutes({ captchaToken }) {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  //
+
   return (
     <>
       <Routes>
