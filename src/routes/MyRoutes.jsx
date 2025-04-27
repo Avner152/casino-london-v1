@@ -12,7 +12,7 @@ import Blackjack from "../components/paginations/info/Blackjack";
 
 export default function MyRoutes({ captchaToken }) {
   const location = useLocation();
-
+  //
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
