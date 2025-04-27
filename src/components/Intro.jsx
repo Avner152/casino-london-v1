@@ -1,0 +1,158 @@
+import { observer } from "mobx-react";
+import casino from "../assets/casino.png";
+import myStore from "../mobX/Store";
+import { useMediaQuery } from "react-responsive";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { toJS } from "mobx";
+
+const Intro = observer(() => {
+  const curDate = new Date();
+  const fullYear = curDate.getFullYear();
+  const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
+  const location = useLocation();
+  const [page, setPage] = useState(null);
+
+  const headlineInfo = {
+    homePage: {
+      title: "Check UK's Best Casinos Of 2025",
+      p: "Top UK real money online casinos compared and reviewed. Check our list of the most popular British online casinos. Play safely & responsibly",
+    },
+    crash: {
+      title: "Explore the Top Crash Games in the UK",
+      list: [
+        "🚀 Fast-Paced Thrills: Soar into high-speed action where timing is everything – cash out before the crash and claim your prize. Ideal for players who crave intense, heart-racing casino moments!",
+        "📈 Top-Rated Platforms: Discover trusted UK casinos that feature Aviator and other crash games, ensuring secure gameplay and fair odds.",
+        "🎮 Modern Innovation: Enjoy sleek, immersive crash games designed with UK players in mind – featuring responsive interfaces and cutting-edge mechanics.",
+      ],
+    },
+    live: {
+      title: "Experience the Best Live Roulette in the UK",
+      list: [
+        "🎥 Real-Time Gameplay: Interact with professional dealers and fellow players as the roulette wheel spins in high-definition, live-streamed sessions.",
+        "🎮 Top Platforms Reviewed: Explore the UK’s best online casinos offering seamless, reliable live roulette tables.",
+        "🔒 Safe & Secure: Play responsibly on trusted, licensed UK platforms that ensure fairness and player protection.",
+      ],
+    },
+    bigBassBonanza: {
+      title: "Discover Big Bass Bonanza - A Slot Favorite in the UK ",
+      list: [
+        "🎣 Top-Rated Gameplay: Join the angler in this high-volatility slot packed with free spins, cash-collect features, and fishing-themed fun.",
+        "💸 High Win Potential: With a max win of 2,100x your stake and an engaging bonus round, every spin can bring a thrilling catch.",
+        "🔒 Safe & Secure: Enjoy Big Bass Bonanza on trusted UK casino platforms licensed for fair, responsible, and secure play.",
+      ],
+    },
+    slots: {
+      title: "Best Slot Games UK",
+      list: [
+        "🎰 Top Slots: Play the latest games with exciting themes and big jackpots.",
+        "💸 High Payouts: Enjoy high RTP slots and progressive jackpots for big wins.",
+        "🔒 Secure Play: Experience safe, fair, and licensed gaming at top UK casinos.",
+      ],
+    },
+    blackjack: {
+      title: "Blackjack: The Strategic Icon of UK Casinos",
+      list: [
+        "🃏 A Game of Legacy: From smoky saloons to sleek online tables, blackjack has evolved through centuries while retaining its timeless appeal.",
+        "🧠 Skill Meets Simplicity: With easy-to-learn rules and deep strategic layers, blackjack attracts both casual players and seasoned pros.",
+        "🌐 The Future is Now: Live dealers, mobile gameplay, and VR features are redefining how UK players experience blackjack in 2025.",
+      ],
+    },
+    cookie: {
+      title: "Cookie Policy 18+",
+    },
+    terms: {
+      title: "Terms and Conditions",
+    },
+    privacy: {
+      title: "Privacy Policy",
+    },
+    about: {
+      title: "About Us",
+    },
+  };
+
+  useEffect(() => {
+    switch (location.pathname) {
+      default:
+        return setPage("");
+      case "/live-roulette":
+        setPage("live");
+        break;
+      case "/top-crash-games":
+        setPage("crash");
+        break;
+      case "/big-bass-bonanza":
+        setPage("bigBassBonanza");
+        break;
+      case "/about-us":
+        setPage("about");
+        break;
+      case "/cookie-consent-policy":
+        setPage("cookie");
+        break;
+      case "/terms-and-conditions":
+        setPage("terms");
+        break;
+      case "/privacy-policy":
+        setPage("privacy");
+        break;
+    }
+  }, [location]);
+
+  return (
+    <div className="intro mt-5 tit-n-des text-white p-3">
+      {page ? (
+        <div className="text-white mb-5">
+          <h1 className="intro-title fw-bold w-75">
+            {headlineInfo[page].title}{" "}
+            {location.pathname.includes("games") && fullYear}
+          </h1>
+          {headlineInfo[page].list && (
+            <ul className="list-unstyled fw-bolder">
+              {headlineInfo[page].list.map((li, i) => (
+                <li className="mt-1 mb-1" key={i}>
+                  {li}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ) : (
+        <div
+          className={`d-flex align-items-center justify-content-${
+            isDesktop ? "between" : "center"
+          }`}
+        >
+          <div>
+            <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
+              {myStore.type === "blanca"
+                ? `Check our UK's Best Casinos Of ${curDate.toLocaleString(
+                    "default",
+                    { month: "long" }
+                  )} ${fullYear}`
+                : toJS(myStore.content).firstTitle.replace(
+                    "{curDate}",
+                    `${curDate.toLocaleString("default", {
+                      month: "long",
+                    })} ${curDate.getFullYear()} `
+                  )}
+            </h1>
+          </div>
+          {isDesktop && (
+            <div>
+              <img
+                className="cards"
+                alt="cards"
+                width={isDesktop ? 220 : 120}
+                src={casino}
+              />
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+});
+
+export default Intro;
