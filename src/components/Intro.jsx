@@ -20,19 +20,9 @@ const Intro = observer(() => {
     },
     crash: {
       title: "Explore the Top Crash Games in the UK",
-      list: [
-        "🚀 Fast-Paced Thrills: Soar into high-speed action where timing is everything – cash out before the crash and claim your prize. Ideal for players who crave intense, heart-racing casino moments!",
-        "📈 Top-Rated Platforms: Discover trusted UK casinos that feature Aviator and other crash games, ensuring secure gameplay and fair odds.",
-        "🎮 Modern Innovation: Enjoy sleek, immersive crash games designed with UK players in mind – featuring responsive interfaces and cutting-edge mechanics.",
-      ],
     },
     live: {
       title: "Experience the Best Live Roulette in the UK",
-      list: [
-        "🎥 Real-Time Gameplay: Interact with professional dealers and fellow players as the roulette wheel spins in high-definition, live-streamed sessions.",
-        "🎮 Top Platforms Reviewed: Explore the UK’s best online casinos offering seamless, reliable live roulette tables.",
-        "🔒 Safe & Secure: Play responsibly on trusted, licensed UK platforms that ensure fairness and player protection.",
-      ],
     },
     bigBassBonanza: {
       title: "Discover Big Bass Bonanza - A Slot Favorite in the UK ",
