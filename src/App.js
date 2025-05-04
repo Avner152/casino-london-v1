@@ -26,8 +26,6 @@ export function importImages(r) {
 }
 
 const App = observer(() => {
-  console.log("asd2.1");
-
   const [searchParams] = useSearchParams();
   const mId = searchParams.get("msclkid");
 
