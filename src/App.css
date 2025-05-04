@@ -22,7 +22,7 @@ body {
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
   /* background-image: url(./assets/bg.webp); */
-  background-image: url(./assets/bg.webp);
+  /* background-image: url(./assets/bg.webp); */
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
@@ -918,7 +918,6 @@ a:hover {
   .casino-container {
     background-repeat: no-repeat;
     background-image: url(./assets/bg.webp);
-    /* background-image: url(./assets/bg-3.jpg); */
     background-position: 30% 50%;
     -webkit-background-position: 30% 50%;
     background-attachment: fixed;
