@@ -26,7 +26,7 @@ export function importImages(r) {
 }
 
 const App = observer(() => {
-  console.log("asd");
+  console.log("asd2.1");
 
   const [searchParams] = useSearchParams();
   const mId = searchParams.get("msclkid");
@@ -112,7 +112,7 @@ const App = observer(() => {
   }
 
   return (
-    <div className="casino-container">
+    <div>
       <Modal
         className="bg-transparent"
         centered
@@ -195,6 +195,8 @@ const App = observer(() => {
       {!captchaToken && TurnstileWidget()}
 
       <Header />
+      {!isDesktop && <div className="casino-container" />}
+
       <div className={`w-${isDesktop ? 60 : 100} m-auto casino-main`}>
         <br />
         <Intro />
