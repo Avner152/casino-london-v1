@@ -22,7 +22,7 @@ body {
   background-color: #13161f !important;
   font-family: "Raleway", sans-serif;
   /* background-image: url(./assets/bg.webp); */
-  /* background-image: url(./assets/bg.webp); */
+  background-image: url(./assets/bg.webp);
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
@@ -915,14 +915,14 @@ a:hover {
     font-size: 3vw;
     width: 60%;
   }
+
   .casino-container {
     background-repeat: no-repeat;
-    background-image: url(./assets/bg.webp);
+    background-image: url(./assets/bg-mobile.webp);
     background-position: 30% 50%;
     -webkit-background-position: 30% 50%;
-    background-attachment: fixed;
     background-size: cover;
-    /* background-color: #000000; */
+    background-attachment: fixed;
   }
 }
 
