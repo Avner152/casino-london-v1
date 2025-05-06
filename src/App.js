@@ -41,8 +41,6 @@ const App = observer(() => {
 
   const triggeredRef = useRef(false);
 
-  // useEffect(()=> )
-
   useEffect(() => {
     const handleMouseOut = (e) => {
       if (e.clientY < 0 && !triggeredRef.current) {
@@ -179,9 +177,9 @@ const App = observer(() => {
                 </div>
                 <Button
                   className="text-uppercase main-btn mb-3"
-                  onClick={() =>
-                    window.open(casinoItem.url.replace("{msclkid}", mId))
-                  }
+                  onClick={() => {
+                    window.open(casinoItem.url.replace("{msclkid}", mId));
+                  }}
                 >
                   get bonus
                 </Button>

@@ -8,9 +8,6 @@ import React from "react";
 export default function Footer() {
   const curDate = new Date();
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  // const isTablet = useMediaQuery({
-  //   query: "(min-width: 768px) and (max-width: 1023px)",
-  // });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   const footerText =
@@ -74,7 +71,7 @@ export default function Footer() {
           } m-auto`}
         >
           <div className="footer-logo d-flex flex-column flex-grow-0">
-            <Link to="/">
+            <Link to={`/${window.location.search}`}>
               <img
                 src={logo}
                 width={200}
@@ -112,7 +109,7 @@ export default function Footer() {
                     <Link
                       target={li.target || ""}
                       key={j}
-                      to={li.url}
+                      to={li.url + window.location.search}
                       // href={li.url}
                     >
                       {li.name}

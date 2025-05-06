@@ -137,7 +137,13 @@ export default function PrivacyPolicy() {
                 Cookies and Similar Technologies: We use cookies and related
                 tracking tools to enhance your experience. For more information,
                 please refer to our{" "}
-                <NavLink to="/cookie-consent-policy"> Cookie Policy</NavLink>.
+                <NavLink
+                  to={`/cookie-consent-policy/${window.location.search}`}
+                >
+                  {" "}
+                  Cookie Policy
+                </NavLink>
+                .
               </li>
               <p>
                 For additional questions or requests regarding your data, please

@@ -107,7 +107,7 @@ const CasinoSection = observer(({ captchaToken }) => {
       <div className="w-100 d-flex m-auto text-white justify-content-around align-items-center">
         {homepageIconsObjectList.slice(0, isDesktop ? 4 : 3).map((icon, k) => (
           <div
-            className="d-flex gap-1 fs-7 flex-column align-items-center"
+            className="d-flex gap-1 fs-7 flex-column align-items-center fw-bold"
             key={k}
           >
             <img
@@ -116,7 +116,7 @@ const CasinoSection = observer(({ captchaToken }) => {
               alt={icon.name}
               src={homepageIcons[`${icon.name}-icon.svg`]}
             />
-            <span>
+            <span className="bg-dark bg-opacity-100 px-3 rounded-1">
               {icon.text} {icon.addOn !== undefined ? icon.addOn : ""}
             </span>
           </div>
