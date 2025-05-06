@@ -957,7 +957,11 @@ a:hover {
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1439px) {
   .modal {
-    --bs-modal-width: 100%;
+    --bs-modal-width: 65%;
+  }
+
+  .modal h2 {
+    font-size: 1.7vw;
   }
 
   img[alt="chips"] {
