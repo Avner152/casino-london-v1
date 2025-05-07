@@ -30,7 +30,8 @@ const App = observer(() => {
   const mId = searchParams.get("msclkid");
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
-  const [captchaToken, setCaptchaToken] = useState(null);
+  // const [captchaToken, setCaptchaToken] = useState(null);
+  const [captchaToken, setCaptchaToken] = useState(true);
   const [showPopOut, setShowPopOut] = useState(false);
   const [initialList, setInitialList] = useState([]);
   const scores = [9.7, 9.9, 9.8];
@@ -47,7 +48,7 @@ const App = observer(() => {
         // triggeredRef.current = false;
         triggeredRef.current = true;
 
-        setShowPopOut(isDesktop && initialList.length);
+        // setShowPopOut(isDesktop && initialList.length); // Popup now disabled for every
       }
     };
 
