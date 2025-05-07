@@ -56,7 +56,7 @@ const CasinoSection = observer(({ captchaToken }) => {
           );
 
           if (res.data.list[0].content)
-            myStore.updateContent(res.data.list[0].content);
+            myStore.updateContent(res.data?.list[0]?.content);
         })
         .catch((err) => console.log(err));
     };

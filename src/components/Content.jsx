@@ -92,7 +92,7 @@ export default function Content() {
       <div className="mt-4">
         <h2>Start Your Casino Journey Today</h2>
         <p>
-          Visit topcasinosuk.net to explore the best UK online casinos of
+          Visit topcasinosuk.net to explore the best UK online casinos of{" "}
           {curDate.getFullYear()}. Claim exclusive bonuses, play your favorite
           games, and enjoy a safe, exciting, and responsible gaming experience.
           Your next favorite casino is just a click away - start winning today!

@@ -74,7 +74,7 @@ const App = observer(() => {
         { headers }
       )
       .then((res) => {
-        console.log(res?.data?.list[0]?.type);
+        // console.log(res?.data?.list[0]?.type);
 
         if (res?.data?.list[0]?.type === "blanca") return;
 
