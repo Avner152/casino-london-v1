@@ -85,6 +85,16 @@ export default function Content() {
           your next favorite gaming site. Your winning streak starts here!
         </p>
       </div>
+
+      <div>
+        <h2>Play Responsibly!</h2>
+        <p>
+          Gambling can be addictive. Please gamble responsibly. For help, visit{" "}
+          <a href="https://www.gambleaware.org/" target="_blank">
+            BeGambleAware.org
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
