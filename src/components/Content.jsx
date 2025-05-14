@@ -90,7 +90,11 @@ export default function Content() {
         <h2>Play Responsibly!</h2>
         <p>
           Gambling can be addictive. Please gamble responsibly. For help, visit{" "}
-          <a href="https://www.gambleaware.org/" target="_blank">
+          <a
+            href="https://www.gambleaware.org/"
+            rel="noreferrer"
+            target="_blank"
+          >
             BeGambleAware.org
           </a>
         </p>
