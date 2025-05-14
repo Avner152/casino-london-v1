@@ -16,7 +16,7 @@ const Intro = observer(() => {
   const headlineInfo = {
     homePage: {
       title: "Check UK's Best Casinos Of 2025",
-      p: "Top UK real money online casinos compared and reviewed. Check our list of the most popular British online casinos. Play safely & responsibly",
+      p: "Top UK real money online casinos compared and reviewed. Check the list of the most popular British online casinos. Play safely & responsibly",
     },
     crash: {
       title: "Explore the Top Crash Games in the UK",
@@ -117,7 +117,7 @@ const Intro = observer(() => {
           <div>
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
               {myStore.type === "blanca"
-                ? `Check our UK's Best Casinos Of ${curDate.toLocaleString(
+                ? `Check UK's Best Casinos Of ${curDate.toLocaleString(
                     "default",
                     { month: "long" }
                   )} ${fullYear}`
