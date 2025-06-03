@@ -16,7 +16,7 @@ const CasinoSection = observer(({ captchaToken }) => {
 
   const location = useLocation();
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid");
+  const mId = searchParams.get("msclkid") + "-s2";
 
   const search =
     captchaToken !== undefined && !captchaToken
