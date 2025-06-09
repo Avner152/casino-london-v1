@@ -28,7 +28,7 @@ const CasinoItem = ({ item, index, fixedURL }) => {
       >
         <div className="col-md-3 rounded _square">
           <img
-            className="object-fit-cover"
+            className="object-fit-contain"
             alt={item.name}
             width={210}
             height={80}
