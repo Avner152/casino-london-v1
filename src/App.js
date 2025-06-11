@@ -27,7 +27,7 @@ export function importImages(r) {
 
 const App = observer(() => {
   const [searchParams] = useSearchParams();
-  const mId = searchParams.get("msclkid") + "-s2";
+  const mId = searchParams.get("msclkid");
 
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   // const [captchaToken, setCaptchaToken] = useState(null);
