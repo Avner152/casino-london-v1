@@ -6,7 +6,7 @@ export default function BigBassBonanza() {
   const curDate = new Date();
 
   const titlePar = {
-    h1: `Play Big Bass Bonanza in the UK – Reeling in Wins in  ${curDate.getFullYear()}`,
+    h1: `"Big Bass Bonanza – Top Slot Picks in the UK - ${curDate.getFullYear()}`,
     p: "Big Bass Bonanza has become a standout favorite in UK online casinos, thanks to its charming fishing theme, rewarding features, and simple yet exciting mechanics. Created by Pragmatic Play, this game blends fun visuals with serious win potential, attracting both casual players and serious slot fans alike.\nWhether you’re new to online slots or a seasoned angler, Big Bass Bonanza in 2025 promises an unforgettable gaming experience with every spin.",
   };
 
