@@ -19,13 +19,13 @@ const Intro = observer(() => {
       p: "Top UK real money online casinos compared and reviewed. Check the list of the most popular British online casinos. Play safely & responsibly",
     },
     crash: {
-      title: "Explore the Top Crash Games in the UK",
+      title: "Best Crash Games in the UK – Our  Casino Picks",
     },
     live: {
-      title: "Experience the Best Live Roulette in the UK",
+      title: "Top Live Roulette in the UK – Casino List",
     },
     bigBassBonanza: {
-      title: "Discover Big Bass Bonanza - A Slot Favorite in the UK ",
+      title: "Big Bass Bonanza – Top Slot Picks in the UK",
       list: [
         "🎣 Top-Rated Gameplay: Join the angler in this high-volatility slot packed with free spins, cash-collect features, and fishing-themed fun.",
         "💸 High Win Potential: With a max win of 2,100x your stake and an engaging bonus round, every spin can bring a thrilling catch.",
@@ -41,7 +41,7 @@ const Intro = observer(() => {
       ],
     },
     blackjack: {
-      title: "Blackjack: The Strategic Icon of UK Casinos",
+      title: "Best UK Blackjack Games & Providers – Our Casino Picks",
       list: [
         "🃏 A Game of Legacy: From smoky saloons to sleek online tables, blackjack has evolved through centuries while retaining its timeless appeal.",
         "🧠 Skill Meets Simplicity: With easy-to-learn rules and deep strategic layers, blackjack attracts both casual players and seasoned pros.",

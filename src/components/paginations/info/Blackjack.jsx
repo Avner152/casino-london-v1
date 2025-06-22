@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 export default function Blackjack() {
   const curDate = new Date();
   const topPar = {
-    h4: `Best UK Blackjack Games & Providers – Our Casino Picks - ${curDate.getFullYear()}`,
+    h4: `Explore the Legacy and Future of Blackjack in UK Casinos - ${curDate.getFullYear()}`,
     p: "Blackjack has long stood as a pillar of the UK casino experience - merging strategic depth with fast - paced excitement. From its early days in European gaming houses to its dominance in both land - based and online UK casinos, blackjack remains unmatched in popularity and prestige.\nThis year, we’re spotlighting the enduring legacy and dynamic evolution of blackjack as it continues to captivate a new generation of players.",
   };
 
