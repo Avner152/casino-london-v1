@@ -6,7 +6,7 @@ export default function LiveRoulette() {
   const curDate = new Date();
 
   const topPar = {
-    h2: `Experience the Best Live Roulette in the UK for ${curDate.getFullYear()}`,
+    h2: `Top Live Roulette in the UK – Casino List - ${curDate.getFullYear()}`,
     p: "Step into the spin with the most immersive live roulette experiences, bringing the iconic casino game straight to your screen in real time.",
     list: [
       "🎥 Real - Time Gameplay: Interact with professional dealers and fellow players as the roulette wheel spins in high - definition, live - streamed sessions.",

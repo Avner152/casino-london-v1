@@ -55,6 +55,8 @@ const CasinoSection = observer(({ captchaToken }) => {
             res.data.list[0].brands.filter((brand) => !brand.isFrozen)
           );
 
+          console.log(res.data);
+
           if (res.data.list[0].content)
             myStore.updateContent(res.data?.list[0]?.content);
         })

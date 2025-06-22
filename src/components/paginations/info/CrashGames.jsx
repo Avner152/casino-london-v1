@@ -5,7 +5,7 @@ export default function CrashGames() {
   const curDate = new Date();
 
   const topPar = {
-    h2: `Discover the Best Crash Games in the UK for ${curDate.getFullYear()}`,
+    h2: `Best Crash Games in the UK – Our  Casino Picks - ${curDate.getFullYear()}`,
     p: "Crash games - especially the fan - favorite Aviator - are revolutionizing the UK casino scene. These adrenaline - packed games reward sharp reflexes and smart decisions, delivering unmatched thrills to players across the country.",
     list: [
       "🚀 Fast-Paced Thrills: Soar into high-speed action where timing is everything – cash out before the crash and claim your prize. Ideal for players who crave intense, heart-racing casino moments!",
