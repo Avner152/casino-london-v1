@@ -96,8 +96,8 @@ const Intro = observer(() => {
   return (
     <div className="intro mt-5 tit-n-des text-white p-3">
       {page ? (
-        <div className="text-white mb-5">
-          <h1 className="intro-title fw-bold w-75">
+        <div className="text-white mb-5_">
+          <h1 className="intro-title fw-bold w-75 sm-w-100">
             {headlineInfo[page].title}
             {curDate.toLocaleString("default", { month: "long" })} {fullYear}
           </h1>
