@@ -19,7 +19,7 @@ const Intro = observer(() => {
       p: "Top UK real money online casinos compared and reviewed. Check the list of the most popular British online casinos. Play safely & responsibly",
     },
     crash: {
-      title: "Best Crash Games in the UK – Our  Casino Picks",
+      title: "Best Crash Games in the UK – Our  Casino Picks for ",
     },
     live: {
       title: "Top Live Roulette in the UK – Top Casino List - ",
