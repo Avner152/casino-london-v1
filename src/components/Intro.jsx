@@ -22,10 +22,10 @@ const Intro = observer(() => {
       title: "Best Crash Games in the UK – Our  Casino Picks",
     },
     live: {
-      title: "Top Live Roulette in the UK – Casino List",
+      title: "Top Live Roulette in the UK – Top Casino List - ",
     },
     bigBassBonanza: {
-      title: "Big Bass Bonanza – Top Slot Picks in the UK",
+      title: "Big Bass Bonanza – Top Slot Picks in the UK - ",
       list: [
         "🎣 Top-Rated Gameplay: Join the angler in this high-volatility slot packed with free spins, cash-collect features, and fishing-themed fun.",
         "💸 High Win Potential: With a max win of 2,100x your stake and an engaging bonus round, every spin can bring a thrilling catch.",
@@ -33,7 +33,7 @@ const Intro = observer(() => {
       ],
     },
     slots: {
-      title: "Best Slot Games UK",
+      title: "Best Slot Games UK - Our Picks for ",
       list: [
         "🎰 Top Slots: Play the latest games with exciting themes and big jackpots.",
         "💸 High Payouts: Enjoy high RTP slots and progressive jackpots for big wins.",
@@ -41,7 +41,7 @@ const Intro = observer(() => {
       ],
     },
     blackjack: {
-      title: "Best UK Blackjack Games & Providers – Our Casino Picks",
+      title: "Best UK Blackjack Games & Providers – Our Casino Picks for ",
       list: [
         "🃏 A Game of Legacy: From smoky saloons to sleek online tables, blackjack has evolved through centuries while retaining its timeless appeal.",
         "🧠 Skill Meets Simplicity: With easy-to-learn rules and deep strategic layers, blackjack attracts both casual players and seasoned pros.",
@@ -78,6 +78,9 @@ const Intro = observer(() => {
       case "/about-us":
         setPage("about");
         break;
+      case "/blackjack":
+        setPage("blackjack");
+        break;
       case "/cookie-consent-policy":
         setPage("cookie");
         break;
@@ -95,10 +98,10 @@ const Intro = observer(() => {
       {page ? (
         <div className="text-white mb-5">
           <h1 className="intro-title fw-bold w-75">
-            {headlineInfo[page].title}{" "}
-            {location.pathname.includes("games") && fullYear}
+            {headlineInfo[page].title}
+            {curDate.toLocaleString("default", { month: "long" })} {fullYear}
           </h1>
-          {headlineInfo[page].list && (
+          {/* {headlineInfo[page].list && (
             <ul className="list-unstyled fw-bolder">
               {headlineInfo[page].list.map((li, i) => (
                 <li className="mt-1 mb-1" key={i}>
@@ -106,7 +109,7 @@ const Intro = observer(() => {
                 </li>
               ))}
             </ul>
-          )}
+          )} */}
         </div>
       ) : (
         <div
