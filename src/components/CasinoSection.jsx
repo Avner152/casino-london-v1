@@ -18,12 +18,12 @@ const CasinoSection = observer(({ captchaToken }) => {
   const [searchParams] = useSearchParams();
   const mId = searchParams.get("msclkid");
 
-  const search =
-    captchaToken !== undefined && !captchaToken
-      ? "special-and-hard-coded"
-      : location.search;
+  // const search =
+  //   captchaToken !== undefined && !captchaToken
+  //     ? "special-and-hard-coded"
+  //     : location.search;
 
-  // const search = "";
+  const search = ""; // negro
   const [userIp, setUserIp] = useState(null);
 
   useEffect(() => {
