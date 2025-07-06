@@ -125,7 +125,12 @@ export default function Footer() {
 
         <div className="d-flex flex-wrap gap-3 mt-5 justify-content-center">
           {regLogosData.map((photo, k) => (
-            <a key={k} href={photo.url}>
+            <a
+              key={k}
+              href={photo.url}
+              target={photo.url ? "_blank" : null}
+              rel={photo.url ? "noreferrer" : null}
+            >
               <img
                 alt={photo.name}
                 height={isDesktop ? 30 : 15}
