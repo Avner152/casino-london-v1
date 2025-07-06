@@ -3,7 +3,7 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose TopCasinoUK.net?",
+    h2: "Why Choose TopCasinosUK.net?",
     ul: [
       "🎯 Expertly Curated Selection – Handpicked online casinos based on trust, game variety, and player satisfaction, ensuring a premium gaming experience every time.",
       "🎁 Exclusive Bonuses – Boost your bankroll with generous welcome bonuses, free spins, and ongoing promotions tailored for UK players.",
@@ -34,11 +34,11 @@ export default function Content() {
   return (
     <div className="content-container w-100 m-auto">
       <h1 className="fw-bold text-white">
-        Welcome to TopCasinoUK.net - Your Ultimate Guide to the Best UK Online
+        Welcome to TopCasinosUK.net - Your Ultimate Guide to the Best UK Online
         Casinos in {curDate.getFullYear()}!
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At TopCasinoUK.net, we
+        Ready to experience the thrill of online gaming? At TopCasinosUK.net, we
         bring you the most comprehensive and up-to-date guide to the best UK
         online casinos. Whether you’re a seasoned player or just starting your
         online casino journey, our carefully curated site is designed to help
