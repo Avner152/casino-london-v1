@@ -32,7 +32,7 @@ const CasinoItem = ({ item, index, fixedURL }) => {
             alt={item.name}
             width={210}
             height={80}
-            src={brands[srcTerm]}
+            src={item.image}
           />
         </div>
         <div className="welcome-bonus text-white d-flex flex-column gap-2 col-md-3">

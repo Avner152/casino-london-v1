@@ -137,13 +137,7 @@ const App = observer(() => {
                     alt="card-logo"
                     // width={180}
                     height={70}
-                    src={
-                      toJS(myStore.brands)[
-                        `${casinoItem.name
-                          .toLocaleLowerCase()
-                          .replaceAll(" ", "-")}.png`
-                      ]
-                    }
+                    src={casinoItem.image}
                   />
                 </div>
                 <h2 className="px-4 fw-bold">{casinoItem.title}</h2>
