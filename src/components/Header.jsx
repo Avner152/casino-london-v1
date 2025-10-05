@@ -75,7 +75,7 @@ export default function Header() {
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
             <NavLink to={`/${window.location.search}`}>
-              <img src={logo} width={220} alt="logo" height={35} />
+              <img src={logo} width={150} alt="logo" height={55} />
             </NavLink>
             <Nav className="fs-6 gap-3">
               {menu[0].list.map((item, i) => (
@@ -93,7 +93,7 @@ export default function Header() {
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
               <NavLink to={`/${window.location.search}`} className="ms-3">
-                <img alt="logo" src={logo} width={180} />
+                <img alt="logo" src={logo} width={140} />
               </NavLink>
               {/*  */}
 
@@ -107,21 +107,6 @@ export default function Header() {
                   onOpen={hamburgerHandler}
                   onClose={hamburgerHandler}
                 >
-                  <Link
-                    onClick={() => {
-                      setShow("");
-                      setBurgerOpen(false);
-                    }}
-                    to={`/${window.location.search}`}
-                  >
-                    <img
-                      src={logo}
-                      width={125}
-                      alt="logo"
-                      height={20}
-                      className="_mt-2"
-                    />
-                  </Link>
                   {menu.map((menuItem, _) => (
                     <div
                       key={menuItem.title}

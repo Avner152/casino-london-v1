@@ -3,7 +3,7 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose TopCasinosUK.net?",
+    h2: "Why Choose BuzzCasinosUK.com?",
     ul: [
       "🎯 Expertly Curated Selection – Handpicked online casinos based on trust, game variety, and player satisfaction, ensuring a premium gaming experience every time.",
       "🎁 Exclusive Bonuses – Boost your bankroll with generous welcome bonuses, free spins, and ongoing promotions tailored for UK players.",
@@ -21,7 +21,7 @@ export default function Content() {
   //   p: "Choosing the right online casino can be overwhelming. That’s why we offer a robust FAQ section covering licensing, payment options, game fairness, mobile compatibility, and more - tailored for UK players.",
   //   ques: ["Why Trust Us?"],
   //   ans: [
-  //     "The team at topcasinosuk.net is made up of seasoned casino reviewers and gambling industry professionals. We provide transparent, regularly updated insights to ensure you’re always getting the most accurate information and safest recommendations.",
+  //     "The team at buzzcasinosuk.com is made up of seasoned casino reviewers and gambling industry professionals. We provide transparent, regularly updated insights to ensure you’re always getting the most accurate information and safest recommendations.",
   //   ],
   // };
 
@@ -34,12 +34,12 @@ export default function Content() {
   return (
     <div className="content-container w-100 m-auto">
       <h1 className="fw-bold text-white">
-        Welcome to TopCasinosUK.net - Your Ultimate Guide to the Best UK Online
+        Welcome to BuzzCasinosUK.com - Your Ultimate Guide to the Best UK Online
         Casinos in {curDate.getFullYear()}!
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At TopCasinosUK.net, we
-        bring you the most comprehensive and up-to-date guide to the best UK
+        Ready to experience the thrill of online gaming? At BuzzCasinosUK.com,
+        we bring you the most comprehensive and up-to-date guide to the best UK
         online casinos. Whether you’re a seasoned player or just starting your
         online casino journey, our carefully curated site is designed to help
         you discover the top-rated, most trusted, and rewarding casinos in the
