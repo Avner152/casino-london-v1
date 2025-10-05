@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
-import { importImages } from "../App";
 
 const CasinoItem = ({ item, index, fixedURL }) => {
   const score = 10 - (index + 1) / 10;
