@@ -100,13 +100,15 @@ const Intro = observer(() => {
       {page ? (
         <div className="text-white mb-5_">
           <h1 className="intro-title fw-bold w-75 sm-w-100">
-            {headlineInfo[page].title}
-            {!infoPages.some((page) => location.pathname.includes(page)) && (
-              <>
-                {curDate.toLocaleString("default", { month: "long" })}{" "}
-                {fullYear}
-              </>
-            )}
+            <span className="bg-dark bg-opacity-75">
+              {headlineInfo[page].title}
+              {!infoPages.some((page) => location.pathname.includes(page)) && (
+                <>
+                  {curDate.toLocaleString("default", { month: "long" })}{" "}
+                  {fullYear}
+                </>
+              )}
+            </span>
           </h1>
         </div>
       ) : (
@@ -117,17 +119,19 @@ const Intro = observer(() => {
         >
           <div>
             <h1 className={`intro-title fw-bold w-${isDesktop ? 75 : 100}`}>
-              {myStore.type === "blanca"
-                ? `Check UK's Best Casinos Of ${curDate.toLocaleString(
-                    "default",
-                    { month: "long" }
-                  )} ${fullYear}`
-                : toJS(myStore.content).firstTitle.replace(
-                    "{curDate}",
-                    `${curDate.toLocaleString("default", {
-                      month: "long",
-                    })} ${curDate.getFullYear()} `
-                  )}
+              <span className="bg-dark bg-opacity-75">
+                {myStore.type === "blanca"
+                  ? `Check UK's Best Casinos Of ${curDate.toLocaleString(
+                      "default",
+                      { month: "long" }
+                    )} ${fullYear}`
+                  : toJS(myStore.content).firstTitle.replace(
+                      "{curDate}",
+                      `${curDate.toLocaleString("default", {
+                        month: "long",
+                      })} ${curDate.getFullYear()} `
+                    )}
+              </span>
             </h1>
           </div>
           {isDesktop && (
