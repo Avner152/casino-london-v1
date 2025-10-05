@@ -12,8 +12,7 @@ import Intro from "./components/Intro";
 import { Button, CloseButton, Modal } from "react-bootstrap";
 import axios from "axios";
 import { observer } from "mobx-react";
-import { toJS } from "mobx";
-import myStore from "./mobX/Store";
+
 import chips from "./assets/golden-chips.png";
 import { useSearchParams } from "react-router-dom";
 

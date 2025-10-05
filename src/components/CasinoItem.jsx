@@ -6,10 +6,6 @@ import { importImages } from "../App";
 const CasinoItem = ({ item, index, fixedURL }) => {
   const score = 10 - (index + 1) / 10;
 
-  const srcTerm = `${item.name.toLowerCase().replaceAll(" ", "-")}.png`;
-  const brands = importImages(
-    require.context("../assets/brands", false, /\.(png|jpe?g|svg)$/)
-  );
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
 
   const [clicked, setClicked] = useState(false);
