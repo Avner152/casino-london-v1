@@ -13,6 +13,8 @@ const Intro = observer(() => {
   const location = useLocation();
   const [page, setPage] = useState(null);
 
+  const infoPages = ["cookie", "about", "terms", "privacy"];
+
   const headlineInfo = {
     homePage: {
       title: "Check UK's Best Casinos Of 2025",
@@ -58,7 +60,7 @@ const Intro = observer(() => {
       title: "Privacy Policy",
     },
     about: {
-      title: "About Us",
+      title: "About Us ",
     },
   };
 
@@ -99,17 +101,13 @@ const Intro = observer(() => {
         <div className="text-white mb-5_">
           <h1 className="intro-title fw-bold w-75 sm-w-100">
             {headlineInfo[page].title}
-            {curDate.toLocaleString("default", { month: "long" })} {fullYear}
+            {!infoPages.some((page) => location.pathname.includes(page)) && (
+              <>
+                {curDate.toLocaleString("default", { month: "long" })}{" "}
+                {fullYear}
+              </>
+            )}
           </h1>
-          {/* {headlineInfo[page].list && (
-            <ul className="list-unstyled fw-bolder">
-              {headlineInfo[page].list.map((li, i) => (
-                <li className="mt-1 mb-1" key={i}>
-                  {li}
-                </li>
-              ))}
-            </ul>
-          )} */}
         </div>
       ) : (
         <div
