@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet";
 export default function Terms() {
   const curDate = new Date();
   const meta = {
-    title: "Terms and Conditions | buzzcasinosuk.com",
+    title: "Terms and Conditions | casinobuzzuk.com",
     description:
-      "Read the Terms and Conditions for using buzzcasinosuk.com's website and services. Learn about your rights, obligations, and the rules governing your use of our site.",
+      "Read the Terms and Conditions for using casinobuzzuk.com's website and services. Learn about your rights, obligations, and the rules governing your use of our site.",
   };
   return (
     <>
@@ -22,7 +22,7 @@ export default function Terms() {
           </span>
           <p>
             These Terms and Conditions govern your use of our site and services.
-            By accessing or using buzzcasinosuk.com, you agree to be bound by
+            By accessing or using CasinoBuzzUK.com, you agree to be bound by
             these Terms. If you do not agree with any part of these Terms,
             please refrain from using our Service.
           </p>

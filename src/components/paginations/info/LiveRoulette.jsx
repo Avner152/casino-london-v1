@@ -12,7 +12,7 @@ export default function LiveRoulette() {
       "🎥 Real - Time Gameplay: Interact with professional dealers and fellow players as the roulette wheel spins in high - definition, live - streamed sessions.",
       "🎮 Top Platforms Reviewed: Explore the UK’s best online casinos offering seamless, reliable live roulette tables.",
       "🔒 Safe & Secure: Play responsibly on trusted, licensed UK platforms that ensure fairness and player protection.",
-      `Place your bets and feel the thrill - experience the best of live roulette in ${curDate.getFullYear()} with buzzcasinosuk.com!`,
+      `Place your bets and feel the thrill - experience the best of live roulette in ${curDate.getFullYear()} with casinobuzzuk.com!`,
     ],
   };
 
@@ -51,7 +51,7 @@ export default function LiveRoulette() {
       "Set Limits: Stick to your budget and play within your means.",
       "Look for Bonuses: Some UK casinos offer live roulette-specific promotions – use them to your advantage.",
     ],
-    p: "With tech innovations like multiple camera angles and slow - motion replays, live roulette continues to evolve. Get ready for a world - class experience - play live roulette on buzzcasinosuk.com and enjoy the spin of a lifetime. Always play responsibly.",
+    p: "With tech innovations like multiple camera angles and slow - motion replays, live roulette continues to evolve. Get ready for a world - class experience - play live roulette on casinobuzzuk.com and enjoy the spin of a lifetime. Always play responsibly.",
   };
 
   const meta = {

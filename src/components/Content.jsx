@@ -3,7 +3,7 @@ export default function Content() {
 
   const why = {
     id: "why",
-    h2: "Why Choose BuzzCasinosUK.com?",
+    h2: "Why Choose CasinoBuzzUK.com?",
     ul: [
       "🎯 Expertly Curated Selection – Handpicked online casinos based on trust, game variety, and player satisfaction, ensuring a premium gaming experience every time.",
       "🎁 Exclusive Bonuses – Boost your bankroll with generous welcome bonuses, free spins, and ongoing promotions tailored for UK players.",
@@ -16,30 +16,16 @@ export default function Content() {
       "💬 Advertiser Disclosure – This website is a free online resource dedicated to providing valuable content and comparison tools for our visitors. We receive advertising compensation from the companies featured on this site, which may influence the placement and ranking of brands (and/or their products) as well as the scores assigned to them. The inclusion of companies on this page does not imply endorsement. We do not cover all providers available in the market. Except as expressly outlined in our Terms of Use, we disclaim any representations and warranties regarding the information provided on this page. The content, including pricing, is subject to change at any time.",
     ],
   };
-  // const faq = {
-  //   t: "Comprehensive Insights and FAQs",
-  //   p: "Choosing the right online casino can be overwhelming. That’s why we offer a robust FAQ section covering licensing, payment options, game fairness, mobile compatibility, and more - tailored for UK players.",
-  //   ques: ["Why Trust Us?"],
-  //   ans: [
-  //     "The team at buzzcasinosuk.com is made up of seasoned casino reviewers and gambling industry professionals. We provide transparent, regularly updated insights to ensure you’re always getting the most accurate information and safest recommendations.",
-  //   ],
-  // };
-
-  // const advertiser = {
-  //   id: "advertiser",
-  //   h2: "18+ Advertiser Disclosure",
-  //   p: "This website is a free online resource dedicated to providing valuable content and comparison tools for our visitors. We receive advertising compensation from the companies featured on this site, which may influence the placement and ranking of brands (and/or their products) as well as the scores assigned to them. The inclusion of companies on this page does not imply endorsement. We do not cover all providers available in the market. Except as expressly outlined in our Terms of Use, we disclaim any representations and warranties regarding the information provided on this page. The content, including pricing, is subject to change at any time.",
-  // };
 
   return (
     <div className="content-container w-100 m-auto">
       <h1 className="fw-bold text-white">
-        Welcome to BuzzCasinosUK.com - Your Ultimate Guide to the Best UK Online
+        Welcome to CasinoBuzzUK.com - Your Ultimate Guide to the Best UK Online
         Casinos in {curDate.getFullYear()}!
       </h1>
       <p>
-        Ready to experience the thrill of online gaming? At BuzzCasinosUK.com,
-        we bring you the most comprehensive and up-to-date guide to the best UK
+        Ready to experience the thrill of online gaming? At CasinoBuzzUK.com, we
+        bring you the most comprehensive and up-to-date guide to the best UK
         online casinos. Whether you’re a seasoned player or just starting your
         online casino journey, our carefully curated site is designed to help
         you discover the top-rated, most trusted, and rewarding casinos in the

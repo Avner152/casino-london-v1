@@ -75,7 +75,7 @@ export default function Header() {
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
             <NavLink to={`/${window.location.search}`}>
-              <img src={logo} width={150} alt="logo" height={55} />
+              <img src={logo} width={140} alt="logo" height={75} />
             </NavLink>
             <Nav className="fs-6 gap-3">
               {menu[0].list.map((item, i) => (
@@ -93,7 +93,7 @@ export default function Header() {
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
               <NavLink to={`/${window.location.search}`} className="ms-3">
-                <img alt="logo" src={logo} width={140} />
+                <img alt="logo" src={logo} width={120} />
               </NavLink>
               {/*  */}
 

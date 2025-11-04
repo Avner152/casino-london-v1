@@ -74,8 +74,8 @@ export default function Footer() {
             <Link to={`/${window.location.search}`}>
               <img
                 src={logo}
-                width={200}
-                height={70}
+                width={150}
+                height={85}
                 alt="logo"
                 className="_mt-2"
               />

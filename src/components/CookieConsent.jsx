@@ -8,7 +8,7 @@ const CookieConsent = ({ setCookieStatus }) => {
       "top-casino-consent",
       accepted,
       accepted ? 365 : 1,
-      "buzzcasinosuk.com"
+      "casinobuzzuk.com"
     );
     setCookieStatus(true);
   };
