@@ -26,7 +26,9 @@ const PortalSection = observer(({ captchaToken }) => {
   // const search = "";
   const [userIp, setUserIp] = useState(null);
 
-  const ENDPOINT = `http://localhost:5001/london/prd?product=${myStore.product}`;
+  // const ENDPOINT = `http://localhost:5001/london/prd?product=${myStore.product}`;
+  const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/london/prd?product=${myStore.product}`;
+
   const HEADERS = { headers: { segment: "viral" } };
 
   const fetchIp = async () => {
