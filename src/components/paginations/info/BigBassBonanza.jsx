@@ -1,5 +1,5 @@
 import React from "react";
-import CasinoSection from "../../CasinoSection";
+import PortalSection from "../../PortalSection";
 import { Helmet } from "react-helmet";
 
 export default function BigBassBonanza() {
@@ -59,7 +59,7 @@ export default function BigBassBonanza() {
         <meta name="description" content={meta.description} />
       </Helmet>
 
-      <CasinoSection />
+      <PortalSection />
       <div className="fw-bold w-100 text-bg-dark text-white pt-4 mb-5 mt-2 information">
         <div className="p-4">
           <h1>{titlePar.h1}</h1>

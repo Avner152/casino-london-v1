@@ -4,9 +4,13 @@ import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { elastic as Menu } from "react-burger-menu";
 import { Nav } from "react-bootstrap";
+import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
+import { pages } from "../json/helpers";
+
 // import { Button } from "react-bootstrap";
 
-export default function Header() {
+const Header = observer(() => {
   const [isBurgerOpen, setBurgerOpen] = useState(false);
   const [show, setShow] = useState("closed");
 
@@ -42,7 +46,7 @@ export default function Header() {
       list: [
         { name: "About Us", url: "/about-us" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
-        { name: "Terms & Conditions", url: "terms-and-conditions" },
+        { name: "Terms & Conditions", url: "/terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
@@ -74,14 +78,21 @@ export default function Header() {
       >
         {isDesktop ? (
           <div className="d-flex align-items-center justify-content-between w-100">
-            <NavLink to={`/${window.location.search}`}>
+            <NavLink
+              to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                window.location.search
+              }`}
+            >
               <img src={logo} width={140} alt="logo" height={75} />
             </NavLink>
             <Nav className="fs-6 gap-3">
-              {menu[0].list.map((item, i) => (
+              {pages?.[myStore.product || "casino"].map((item, i) => (
                 <NavLink
+                  onClick={() => myStore.updateInfoContent(item.name)}
                   className="my-nav text-white"
-                  to={item.url + window.location.search}
+                  to={`${
+                    myStore.product === "betting" ? "/special/sport" : ""
+                  }${item.url}${window.location.search}`}
                   key={i}
                 >
                   {item.name}
@@ -92,7 +103,12 @@ export default function Header() {
         ) : (
           <>
             <div className="d-flex w-100 align-items-center justify-content-between">
-              <NavLink to={`/${window.location.search}`} className="ms-3">
+              <NavLink
+                to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                  window.location.search
+                }`}
+                className="ms-3"
+              >
                 <img alt="logo" src={logo} width={120} />
               </NavLink>
               {/*  */}
@@ -120,8 +136,16 @@ export default function Header() {
                             setBurgerOpen(false);
                           }}
                           key={j}
-                          to={li.url + window.location.search}
-                          href={li.url + window.location.search}
+                          to={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
+                          href={`${
+                            myStore.product === "betting"
+                              ? "/special/sport"
+                              : ""
+                          }${li.url}${window.location.search}`}
                         >
                           {li.name}
                         </Link>
@@ -138,4 +162,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+});
+
+export default Header;

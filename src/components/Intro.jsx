@@ -101,7 +101,7 @@ const Intro = observer(() => {
         <div className="text-white mb-5_">
           <h1 className="intro-title fw-bold w-75 sm-w-100">
             <span className="bg-dark bg-opacity-75">
-              {headlineInfo[page].title}
+              {headlineInfo?.[page]?.title}
               {!infoPages.some((page) => location.pathname.includes(page)) && (
                 <>
                   {curDate.toLocaleString("default", { month: "long" })}{" "}
@@ -125,7 +125,7 @@ const Intro = observer(() => {
                       "default",
                       { month: "long" }
                     )} ${fullYear}`
-                  : toJS(myStore.content).firstTitle.replace(
+                  : toJS(myStore.content)?.firstTitle.replace(
                       "{curDate}",
                       `${curDate.toLocaleString("default", {
                         month: "long",

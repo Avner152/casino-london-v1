@@ -10,7 +10,7 @@ import { toJS } from "mobx";
 import myStore from "../mobX/Store";
 import { importImages } from "../App";
 
-const CasinoSection = observer(({ captchaToken }) => {
+const PortalSection = observer(({ captchaToken }) => {
   const list = toJS(myStore.list);
   captchaToken = true;
 
@@ -26,45 +26,45 @@ const CasinoSection = observer(({ captchaToken }) => {
   // const search = "";
   const [userIp, setUserIp] = useState(null);
 
+  const ENDPOINT = `http://localhost:5001/london/prd?product=${myStore.product}`;
+  const HEADERS = { headers: { segment: "viral" } };
+
+  const fetchIp = async () => {
+    try {
+      const response = await axios.get("https://api.ipify.org?format=json");
+      setUserIp(response.data.ip);
+    } catch (err) {
+      console.error("Error fetching IP:", err);
+    }
+  };
+  const fetchData = async () => {
+    axios
+      .post(ENDPOINT, { search, referrer: document.referrer, userIp }, HEADERS)
+      .then((res) => {
+        // setList(res.data.list[0].brands);
+        console.log(res.data);
+
+        // myStore.updateType()
+        myStore.updateType(res.data.list[0].type);
+        myStore.updateList(
+          res.data.list[0].brands.filter((brand) => !brand.isFrozen)
+        );
+
+        console.log(res.data);
+
+        if (res.data.list[0].content)
+          myStore.updateContent(res.data?.list[0]?.content);
+      })
+      .catch((err) => console.log(err));
+  };
+
   useEffect(() => {
+    console.log("list.length>", list.length);
+
     if (list.length) return;
 
-    const ENDPOINT = `${process.env.REACT_APP_SERVER_URI}/london/prd`;
-    const headers = { segment: "viral" };
-
-    const fetchIp = async () => {
-      try {
-        const response = await axios.get("https://api.ipify.org?format=json");
-        setUserIp(response.data.ip);
-      } catch (err) {
-        console.error("Error fetching IP:", err);
-      }
-    };
-    const fetchData = async () => {
-      axios
-        .post(
-          ENDPOINT,
-          { search, referrer: document.referrer, userIp },
-          { headers }
-        )
-        .then((res) => {
-          // console.log(res.data);
-          // setList(res.data.list[0].brands);
-          myStore.updateType(res.data.list[0].type);
-          myStore.updateList(
-            res.data.list[0].brands.filter((brand) => !brand.isFrozen)
-          );
-
-          console.log(res.data);
-
-          if (res.data.list[0].content)
-            myStore.updateContent(res.data?.list[0]?.content);
-        })
-        .catch((err) => console.log(err));
-    };
-
     fetchIp();
-    userIp && fetchData();
+    userIp && myStore.product && fetchData();
   }, [search, list.length, userIp]);
 
   let homepageIcons = importImages(
@@ -159,4 +159,4 @@ const CasinoSection = observer(({ captchaToken }) => {
   );
 });
 
-export default CasinoSection;
+export default PortalSection;

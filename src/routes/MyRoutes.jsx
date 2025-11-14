@@ -9,11 +9,19 @@ import CrashGames from "../components/paginations/info/CrashGames";
 import LiveRoulette from "../components/paginations/info/LiveRoulette";
 import BigBassBonanza from "../components/paginations/info/BigBassBonanza";
 import Blackjack from "../components/paginations/info/Blackjack";
+import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
+import SportPage from "../components/sport/SportPage";
+import SportTemplate from "../components/paginations/info/SportTemplate";
 
-export default function MyRoutes({ captchaToken }) {
+const MyRoutes = observer(({ captchaToken }) => {
   const location = useLocation();
   //
   useEffect(() => {
+    let isSport = location.pathname.includes("sport");
+    if (!myStore.product) myStore.updateProduct(isSport ? "betting" : "casino");
+    document.body.classList = isSport ? "sport" : "casino";
+
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
@@ -26,26 +34,40 @@ export default function MyRoutes({ captchaToken }) {
           exact
           path="/"
           element={<HomePage captchaToken={captchaToken} />}
-        ></Route>
-        <Route exact path="/terms-and-conditions" element={<Terms />}></Route>
-        <Route exact path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        <Route exact path="/about-us" element={<AboutUs />}></Route>
+        />
+        <Route exact path="/special/sport" element={<SportPage />} />
+        <Route exact path="/terms-and-conditions" element={<Terms />} />
+        <Route exact path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route exact path="/about-us" element={<AboutUs />} />
+        <Route exact path="/cookie-consent-policy" element={<CookiePolicy />} />
 
+        {/*  */}
         <Route
           exact
-          path="/cookie-consent-policy"
+          path="/special/sport/terms-and-conditions"
+          element={<Terms />}
+        />
+        <Route
+          exact
+          path="/special/sport/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route exact path="/special/sport/about-us" element={<AboutUs />} />
+        <Route
+          exact
+          path="/special/sport/cookie-consent-policy"
           element={<CookiePolicy />}
-        ></Route>
+        />
 
-        <Route exact path="/blackjack" element={<Blackjack />}></Route>
-        <Route exact path="/top-crash-games" element={<CrashGames />}></Route>
-        <Route exact path="/live-roulette" element={<LiveRoulette />}></Route>
-        <Route
-          exact
-          path="/big-bass-bonanza"
-          element={<BigBassBonanza />}
-        ></Route>
+        <Route exact path="/special/sport/:page" element={<SportTemplate />} />
+
+        <Route exact path="/blackjack" element={<Blackjack />} />
+        <Route exact path="/top-crash-games" element={<CrashGames />} />
+        <Route exact path="/live-roulette" element={<LiveRoulette />} />
+        <Route exact path="/big-bass-bonanza" element={<BigBassBonanza />} />
       </Routes>
     </>
   );
-}
+});
+
+export default MyRoutes;

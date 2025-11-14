@@ -4,8 +4,11 @@ import { importImages } from "../App";
 import logo from "../assets/logo.png";
 import cards from "../assets/casino.png";
 import React from "react";
+import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
+import { pages } from "../json/helpers";
 
-export default function Footer() {
+const Footer = observer(() => {
   const curDate = new Date();
   const isDesktop = useMediaQuery({ query: "(min-width: 1024px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
@@ -19,30 +22,13 @@ export default function Footer() {
       list: [
         { name: "About Us", url: "/about-us" },
         { name: "Cookies Policy", url: "/cookie-consent-policy" },
-        { name: "Terms & Conditions", url: "terms-and-conditions" },
+        { name: "Terms & Conditions", url: "/terms-and-conditions" },
         { name: "Privacy Policy", url: "/privacy-policy" },
       ],
     },
     {
       title: "Top Pages",
-      list: [
-        {
-          name: "Blackjack",
-          url: "/blackjack",
-        },
-        {
-          name: "Top Crash Games ",
-          url: "/top-crash-games",
-        },
-        {
-          name: "Live Roulette ",
-          url: "/live-roulette",
-        },
-        {
-          name: "Big Bass Bonanza ",
-          url: "/big-bass-bonanza",
-        },
-      ],
+      list: pages?.[myStore.product || "casino"],
     },
   ];
 
@@ -71,7 +57,11 @@ export default function Footer() {
           } m-auto`}
         >
           <div className="footer-logo d-flex flex-column flex-grow-0">
-            <Link to={`/${window.location.search}`}>
+            <Link
+              to={`/${myStore.product === "betting" ? "special/sport" : ""}${
+                window.location.search
+              }`}
+            >
               <img
                 src={logo}
                 width={150}
@@ -107,10 +97,12 @@ export default function Footer() {
                   <span className="fw-bold">{footerItem.title}</span>
                   {footerItem.list.map((li, j) => (
                     <Link
+                      onClick={() => myStore.updateInfoContent(li.name)}
                       target={li.target || ""}
                       key={j}
-                      to={li.url + window.location.search}
-                      // href={li.url}
+                      to={`${
+                        myStore.product === "betting" ? "/special/sport" : ""
+                      }${li.url}${window.location.search}`}
                     >
                       {li.name}
                     </Link>
@@ -150,4 +142,6 @@ export default function Footer() {
       }
     </>
   );
-}
+});
+
+export default Footer;

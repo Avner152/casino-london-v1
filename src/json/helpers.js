@@ -100,3 +100,42 @@ export function getCookie(name) {
 // };
 
 // pushContent();
+
+export const pages = {
+  casino: [
+    {
+      name: "Crash Games ",
+      url: "/top-crash-games",
+    },
+    {
+      name: "Live Roulette ",
+      url: "/live-roulette",
+    },
+    {
+      name: "Big Bass Bonanza ",
+      url: "/big-bass-bonanza",
+    },
+    {
+      name: "Blackjack",
+      url: "/blackjack",
+    },
+  ],
+  betting: [
+    {
+      name: "Football",
+      url: "/football",
+    },
+    {
+      name: "Horse Racing",
+      url: "/horse-racing",
+    },
+    {
+      name: "eSports",
+      url: "/esports",
+    },
+    {
+      name: "Betting Systems",
+      url: "/systems",
+    },
+  ],
+};
