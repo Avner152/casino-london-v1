@@ -8,7 +8,7 @@ const CookieConsent = ({ setCookieStatus }) => {
       "top-casino-consent",
       accepted,
       accepted ? 365 : 1,
-      "casinobuzzuk.com"
+      "casinocompareuk.net"
     );
     setCookieStatus(true);
   };

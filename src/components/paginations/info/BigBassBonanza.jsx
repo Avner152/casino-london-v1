@@ -44,12 +44,12 @@ export default function BigBassBonanza() {
   const responsible = {
     id: "par-4",
     h4: "Play Responsibly",
-    p: `Big Bass Bonanza is all about excitement - but always play within your limits. Set a budget, take breaks, and use responsible gambling tools available on licensed UK sites to ensure a safe and enjoyable experience.\nWhether you're in it for the fun theme or the fish - sized wins, Big Bass Bonanza is a must - play slot in ${curDate.getFullYear()}> - available now on the top UK platforms reviewed at casinobuzzuk.com.`,
+    p: `Big Bass Bonanza is all about excitement - but always play within your limits. Set a budget, take breaks, and use responsible gambling tools available on licensed UK sites to ensure a safe and enjoyable experience.\nWhether you're in it for the fun theme or the fish - sized wins, Big Bass Bonanza is a must - play slot in ${curDate.getFullYear()}> - available now on the top UK platforms reviewed at casinocompareuk.net.`,
   };
 
   const meta = {
     title: `Big Bass Bonanza Slot UK ${curDate.getFullYear()}: Features, Wins & Where to Play`,
-    description: `Play Big Bass Bonanza in the UK’s top casinos for ${curDate.getFullYear()}. Discover exciting features, spin - triggered bonuses, and tips to reel in big wins. Safe, fun, and fully licensed gameplay at casinobuzzuk.com!`,
+    description: `Play Big Bass Bonanza in the UK’s top casinos for ${curDate.getFullYear()}. Discover exciting features, spin - triggered bonuses, and tips to reel in big wins. Safe, fun, and fully licensed gameplay at casinocompareuk.net!`,
   };
 
   return (

@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 export default function CookiePolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Cookie Policy | CasinoBuzzUK.com",
+    title: "Cookie Policy | CasinoCompareUK.net",
     description:
-      "Read our Cookie Policy for casinobuzzuk.com. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site.",
+      "Read our Cookie Policy for casinocompareuk.net. Learn about the types of cookies we use, how they help improve your experience, and how to manage your cookie preferences on our site.",
   };
   return (
     <>

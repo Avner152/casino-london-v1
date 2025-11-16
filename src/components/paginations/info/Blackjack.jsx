@@ -65,9 +65,10 @@ export default function Blackjack() {
         </div>
 
         <p>
-          Join us at CasinoBuzzUK.com as we dive into the evolution of blackjack
-          in {curDate.getFullYear()}. Whether you're a seasoned strategist or a
-          curious beginner, there's never been a better time to play.
+          Join us at CasinoCompareUK.net as we dive into the evolution of
+          blackjack in {curDate.getFullYear()}. Whether you're a seasoned
+          strategist or a curious beginner, there's never been a better time to
+          play.
         </p>
         <p>Blackjack awaits - are you ready to beat the dealer?</p>
       </div>
