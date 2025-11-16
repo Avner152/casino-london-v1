@@ -65,7 +65,7 @@ export default function Blackjack() {
         </div>
 
         <p>
-          Join us at CasinoCompareUK.net as we dive into the evolution of
+          Join us at CasinoPortalUK.net as we dive into the evolution of
           blackjack in {curDate.getFullYear()}. Whether you're a seasoned
           strategist or a curious beginner, there's never been a better time to
           play.

@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 export default function PrivacyPolicy() {
   const curDate = new Date();
   const meta = {
-    title: "Privacy Policy | CasinoCompareUK.net",
+    title: "Privacy Policy | CasinoPortalUK.net",
     description:
-      "Review the Privacy Policy for casinocompareuk.net. Learn how we collect, use, and protect your personal information, including data usage and third - party services",
+      "Review the Privacy Policy for casinoportaluk.net. Learn how we collect, use, and protect your personal information, including data usage and third - party services",
   };
   return (
     <>
@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
           <div>
             <h4>Terms of Use</h4>
             <p>
-              This Privacy Policy is an integral part of CasinoCompareUK.net's
+              This Privacy Policy is an integral part of CasinoPortalUK.net's
               Terms of Use ("Terms"). Any capitalized terms not defined in this
               Privacy Policy will have the meaning assigned to them in the
               Terms.
@@ -78,7 +78,7 @@ export default function PrivacyPolicy() {
             <h4>Information We Collect</h4>
             <p>
               Information You Provide to Us Certain services on
-              CasinoCompareUK.net require you to provide Personal Information,
+              CasinoPortalUK.net require you to provide Personal Information,
               such as signing up for newsletters or requesting more information.
               This may include your name, email address, phone number, or other
               data that identifies you. In some jurisdictions, your IP address
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
           <div>
             <h4>Blogs, Newsletters, Surveys, and Promotions</h4>
             <p>
-              CasinoCompareUK.net may feature blogs, reviews, and promotional
+              CasinoPortalUK.net may feature blogs, reviews, and promotional
               content. Participation in surveys, newsletters, or giveaways may
               require submission of Personal Information. Your data will be
               handled according to this Privacy Policy and the applicable third
