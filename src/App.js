@@ -36,7 +36,7 @@ const App = observer(() => {
   const scores = [9.7, 9.9, 9.8];
 
   const [hasCookie, setCookieStatus] = useState(
-    getCookie("top-casino-cookie") ? true : false
+    getCookie("top-casino-consent") ? true : false
   );
 
   const triggeredRef = useRef(false);
