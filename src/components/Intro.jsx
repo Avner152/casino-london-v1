@@ -96,7 +96,7 @@ const Intro = observer(() => {
   }, [location]);
 
   return (
-    <div className="intro mt-5 tit-n-des text-white p-3">
+    <div className="intro _mt-5 tit-n-des text-white p-3">
       {page ? (
         <div className="text-white mb-5_">
           <h1 className="intro-title fw-bold w-75 sm-w-100">
@@ -139,7 +139,7 @@ const Intro = observer(() => {
               <img
                 className="cards"
                 alt="cards"
-                width={isDesktop ? 220 : 120}
+                width={isDesktop ? 200 : 120}
                 src={casino}
               />
             </div>
