@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react";
+import myStore from "../mobX/Store";
 
 const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
   const [clicked, setClicked] = useState(false);
@@ -8,7 +9,7 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
 
   return (
     <div className="my-card" onClick={() => window.open(fixedURL, "_blank")}>
-      {myStore.type.startsWith("ne") && index < 3 && (
+      {myStore.type.startsWith("") && index < 3 && (
         <p className="ribbon-2 text-capitalize">
           <span className="ribbon-text">{myStore.ribbonList[index]}</span>
         </p>
