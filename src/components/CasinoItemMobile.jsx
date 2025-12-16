@@ -8,9 +8,9 @@ const CasinoItemMobile = observer(({ item, index, fixedURL }) => {
 
   return (
     <div className="my-card" onClick={() => window.open(fixedURL, "_blank")}>
-      {item.ribbonText && (
+      {myStore.type.startsWith("ne") && index < 3 && (
         <p className="ribbon-2 text-capitalize">
-          <span className="ribbon-text">{item.ribbonText}</span>
+          <span className="ribbon-text">{myStore.ribbonList[index]}</span>
         </p>
       )}
       <div className="top-card d-flex justify-content-around align-items-center ">
